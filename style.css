@@ -1,6 +1,6 @@
 /* ===== VARIABLES Y BASE ===== */
 :root {
-    --primary: #309ce4;
+    --primary: #031e31;
     --dark: #1e293b;
     --light: #f4f7fb;
     --text: #334155;
@@ -75,7 +75,9 @@ body {
 .section.active { position:relative; opacity:1; transform:translateY(0); visibility: visible; }
 
 h2 { border-left: 5px solid var(--primary); padding-left: 15px; margin-bottom: 25px; color: var(--dark); }
-.text-justify { text-align: justify; line-height: 1.6; color: #475569; }
+
+/* JUSTIFICADO DE TEXTO */
+.text-justify { text-align: justify; text-justify: inter-word; line-height: 1.6; color: #475569; }
 
 /* COMPONENTES */
 .tags { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px; }
@@ -91,76 +93,27 @@ h2 { border-left: 5px solid var(--primary); padding-left: 15px; margin-bottom: 2
 .timeline .job { margin-bottom: 20px; padding-bottom: 15px; border-bottom: 1px dashed #e2e8f0; }
 .company { display: block; font-size: 0.85rem; color: var(--primary); font-weight: 600; margin-bottom: 8px; }
 
-/* EDUCACIÓN (UNIFICADA) */
-.edu-item {
-    margin-bottom: 25px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
+/* EDUCACIÓN */
+.edu-item { margin-bottom: 25px; display: flex; flex-direction: column; align-items: flex-start; }
 .edu-item strong { color: var(--dark); }
 .btn-titulo {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    margin-top: 10px;
-    padding: 10px 20px;
-    background-color: var(--primary);
-    color: var(--white);
-    text-decoration: none;
-    border-radius: 8px;
-    font-size: 0.85rem;
-    font-weight: 500;
-    transition: var(--transition);
-    width: 220px;
-    box-sizing: border-box; 
+    display: inline-flex; align-items: center; justify-content: center; gap: 8px; margin-top: 10px;
+    padding: 10px 20px; background-color: var(--primary); color: var(--white);
+    text-decoration: none; border-radius: 8px; font-size: 0.85rem; font-weight: 500;
+    transition: var(--transition); width: 220px; box-sizing: border-box; 
 }
-.btn-titulo:hover {
-    background-color: var(--dark);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
+.btn-titulo:hover { background-color: var(--dark); transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
 
-/* CERTIFICACIONES (AJUSTADAS) */
-.cert-grid { 
-    display: grid; 
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
-    gap: 15px; 
-    margin-top: 20px; 
-}
+/* CERTIFICACIONES */
+.cert-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; margin-top: 20px; }
 .cert-item { 
-    display: flex; 
-    flex-direction: column; 
-    align-items: center; 
-    text-align: center; 
-    background: var(--light); 
-    padding: 12px; 
-    border-radius: 15px; 
-    text-decoration: none; 
-    color: var(--text); 
-    transition: var(--transition); 
-    border: 1px solid transparent;
+    display: flex; flex-direction: column; align-items: center; text-align: center; 
+    background: var(--light); padding: 12px; border-radius: 15px; text-decoration: none; 
+    color: var(--text); transition: var(--transition); border: 1px solid transparent;
 }
-.cert-item:hover { 
-    transform: translateY(-5px); 
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1); 
-    border-color: var(--primary); 
-}
-.cert-item img { 
-    width: 80px; /* Tamaño controlado para que no se vean gigantes */
-    height: 80px; 
-    object-fit: contain; 
-    border-radius: 10px; 
-    margin-bottom: 10px; 
-}
-.cert-item p { 
-    margin: 0; 
-    font-size: 0.8rem; 
-    font-weight: 600; 
-    color: var(--dark); 
-    line-height: 1.2;
-}
+.cert-item:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.1); border-color: var(--primary); }
+.cert-item img { width: 80px; height: 80px; object-fit: contain; border-radius: 10px; margin-bottom: 10px; }
+.cert-item p { margin: 0; font-size: 0.8rem; font-weight: 600; color: var(--dark); line-height: 1.2; }
 
 /* CONTACTO */
 .contact-info p { margin: 15px 0; font-size: 1.1rem; }
@@ -182,8 +135,4 @@ h2 { border-left: 5px solid var(--primary); padding-left: 15px; margin-bottom: 2
     .sidebar { flex-direction: row; justify-content: space-around; width: 90%; border-radius: 20px; padding: 10px; gap: 10px;}
     .content { padding: 30px 20px; }
     .section { width: 100%; }
-}
-@media (max-width: 480px) {
-    .btn-titulo { width: 100%; }
-    .cert-grid { grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); }
 }
