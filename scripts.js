@@ -43,10 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     menuItems.forEach(item => {
-        // Click normal
         item.addEventListener("click", () => changeSection(item));
-        
-        // Soporte para teclado (Accesibilidad)
         item.addEventListener("keydown", (e) => {
             if (e.key === "Enter" || e.key === " ") {
                 e.preventDefault();
@@ -55,9 +52,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    /**
-     * Quitar Loader al cargar
-     */
     window.addEventListener("load", () => {
         const loader = document.getElementById("loader");
         if (loader) {
@@ -68,7 +62,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // Ajustar indicador si se cambia el tamaño de la ventana
     window.addEventListener("resize", () => {
         const active = document.querySelector(".menu-item.active");
         if (active) moveIndicator(active);
