@@ -3,49 +3,149 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Luis San Martín | Portafolio TI</title>
     
+    <!-- Favicon -->
     <link rel="icon" type="image/png" href="https://i.postimg.cc/Pqj8N5D8/icons8-portafolio-100.png">
     
+    <!-- SEO Meta Tags -->
     <meta name="description" content="Portafolio profesional de Luis San Martín, especialista en soporte técnico TI e infraestructura de redes con 30 años de trayectoria.">
+    <meta name="keywords" content="Luis San Martín, Soporte TI, Redes, Informática, TNS, Santiago, Chile">
+    <meta name="author" content="Luis San Martín">
+    <meta name="robots" content="index, follow">
     
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Luis San Martín | Portafolio TI">
+    <meta property="og:description" content="Especialista en soporte técnico TI e infraestructura de redes con 30 años de trayectoria.">
+    <meta property="og:image" content="https://i.postimg.cc/fyW3CSb2/yo-IV.jpg">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Luis San Martín | Portafolio TI">
+    <meta name="twitter:description" content="Especialista en soporte técnico TI e infraestructura de redes con 30 años de trayectoria.">
+    <meta name="twitter:image" content="https://i.postimg.cc/fyW3CSb2/yo-IV.jpg">
+    
+    <meta name="theme-color" content="#0f766e">
+    
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous">
+    
+    <!-- Preconnect for Performance -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://i.postimg.cc">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1&display=swap" rel="stylesheet">
+
+    <!-- Schema.org Person (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Luis Antonio San Martín Peña",
+        "jobTitle": "Técnico de Nivel Superior en Informática y Redes",
+        "email": "Luis.SnM@hotmail.com",
+        "telephone": "+56982661439",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "El Bosque",
+            "addressRegion": "Santiago",
+            "addressCountry": "CL"
+        },
+        "description": "Especialista en soporte técnico TI e infraestructura de redes con 30 años de trayectoria. Experiencia en informática educativa, laboratorios Enlaces, Chromebooks y asesoría docente.",
+        "knowsAbout": ["Soporte TI", "Redes LAN", "Informática educativa", "Chromebooks", "Ofimática", "Mantenimiento de hardware"]
+    }
+    </script>
 </head>
 <body>
 
-<div id="loader" role="status" aria-label="Cargando"><div class="spinner"></div></div>
+<!-- Skip link: salta al contenido (accesibilidad) -->
+<a href="#main-content" class="skip-link">Saltar al contenido</a>
+<div id="sr-announce" aria-live="polite" aria-atomic="true" class="sr-only"></div>
 
+<!-- Loader -->
+<div id="loader" role="status" aria-label="Cargando contenido">
+    <div class="spinner"></div>
+    <span class="sr-only">Cargando...</span>
+</div>
+
+<!-- Main Container -->
 <div class="wrapper">
+    <!-- Sidebar Navigation -->
     <nav class="sidebar" aria-label="Navegación principal">
-        <div class="indicator"></div>
-        <a class="menu-item active" data-section="inicio" title="Inicio" role="button" tabindex="0"><i class="fa-solid fa-house"></i></a>
-        <a class="menu-item" data-section="especialidades" title="Habilidades" role="button" tabindex="0"><i class="fa-solid fa-microchip"></i></a>
-        <a class="menu-item" data-section="servicios" title="Servicios" role="button" tabindex="0"><i class="fa-solid fa-screwdriver-wrench"></i></a>
-        <a class="menu-item" data-section="experiencia" title="Experiencia" role="button" tabindex="0"><i class="fa-solid fa-briefcase"></i></a>
-        <a class="menu-item" data-section="educacion" title="Educación" role="button" tabindex="0"><i class="fa-solid fa-graduation-cap"></i></a>
-        <a class="menu-item" data-section="certificaciones" title="Certificaciones" role="button" tabindex="0"><i class="fa-solid fa-award"></i></a> 
-        <a class="menu-item" data-section="contacto" title="Contacto" role="button" tabindex="0"><i class="fa-solid fa-envelope"></i></a>
+        <div class="indicator" aria-hidden="true"></div>
+        <a class="menu-item active" data-section="inicio" href="#inicio" title="Inicio" aria-label="Ir a inicio" aria-current="page">
+            <i class="fa-solid fa-house" aria-hidden="true"></i>
+            <span class="menu-label">Inicio</span>
+        </a>
+        <a class="menu-item" data-section="especialidades" href="#especialidades" title="Habilidades" aria-label="Ver habilidades">
+            <i class="fa-solid fa-microchip" aria-hidden="true"></i>
+            <span class="menu-label">Habilidades</span>
+        </a>
+        <a class="menu-item" data-section="servicios" href="#servicios" title="Servicios" aria-label="Ver servicios">
+            <i class="fa-solid fa-screwdriver-wrench" aria-hidden="true"></i>
+            <span class="menu-label">Servicios</span>
+        </a>
+        <a class="menu-item" data-section="experiencia" href="#experiencia" title="Experiencia" aria-label="Ver experiencia">
+            <i class="fa-solid fa-briefcase" aria-hidden="true"></i>
+            <span class="menu-label">Experiencia</span>
+        </a>
+        <a class="menu-item" data-section="educacion" href="#educacion" title="Educación" aria-label="Ver educación">
+            <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
+            <span class="menu-label">Educación</span>
+        </a>
+        <a class="menu-item" data-section="certificaciones" href="#certificaciones" title="Certificaciones" aria-label="Ver certificaciones">
+            <i class="fa-solid fa-award" aria-hidden="true"></i>
+            <span class="menu-label">Certificaciones</span>
+        </a>
+        <a class="menu-item" data-section="contacto" href="#contacto" title="Contacto" aria-label="Ver contacto">
+            <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+            <span class="menu-label">Contacto</span>
+        </a>
     </nav>
 
+    <!-- Main Card -->
     <main class="card">
+        <!-- Profile Section -->
         <header class="profile">
-            <img src="https://i.postimg.cc/fyW3CSb2/yo-IV.jpg" class="avatar" alt="Foto de perfil de Luis San Martín" loading="lazy">
+            <img src="https://i.postimg.cc/fyW3CSb2/yo-IV.jpg" 
+                 class="avatar" 
+                 alt="Foto de perfil de Luis San Martín, Técnico en Informática y Redes" 
+                 width="150" 
+                 height="150"
+                 loading="eager">
             <h1>Luis San Martín</h1>
             <p class="title">TNS en Informática y Redes</p>
             <div class="profile-badges">
-                <span><i class="fa-solid fa-check"></i> 30 años de trayectoria</span>
+                <span class="badge-experience">
+                    <i class="fa-solid fa-check" aria-hidden="true"></i> 
+                    30 años de trayectoria
+                </span>
             </div>
-            <a href="cv-luis-san-martin.pdf" class="btn-download" target="_blank" rel="noopener noreferrer">
-                <i class="fa-solid fa-file-pdf"></i> Ver CV
+            <a href="cv-luis-san-martin.pdf" 
+               class="btn-download" 
+               target="_blank" 
+               rel="noopener noreferrer"
+               aria-label="Descargar CV en PDF">
+                <i class="fa-solid fa-file-pdf" aria-hidden="true"></i> 
+                <span>Ver CV</span>
             </a>
-            <footer class="footer-status">Disponibilidad Inmediata · Santiago 2026</footer>
+            <footer class="footer-status">
+                <span>Disponibilidad Inmediata</span>
+                <span class="separator">·</span>
+                <span>Santiago 2026</span>
+            </footer>
         </header>
 
-        <section class="content">
+        <!-- Content Area -->
+        <div class="content" id="main-content">
 
-            <div class="section active" id="inicio">
-                <h2>Perfil Profesional</h2>
+            <!-- Inicio Section -->
+            <article class="section active" id="inicio">
+                <h2 tabindex="-1"><span class="section-number">01.</span> Perfil Profesional</h2>
                 <div class="text-justify">
                     <p>
                         Titulado como <strong>Técnico de Nivel Superior en Informática y Redes</strong> con más de 10 años brindando asistencia técnica a instituciones educativas y una trayectoria general de 30 años en el sector TI. 
@@ -54,124 +154,282 @@
                         Mi enfoque principal es ofrecer soluciones hábiles y exhaustivas para una amplia variedad de equipos, especializándome en el diagnóstico y resolución de incidencias de hardware, software y conectividad de red, minimizando tiempos de inactividad.
                     </p>
                 </div>
-            </div>
-
-            <div class="section" id="especialidades">
-                <h2>Habilidades Clave</h2>
-                <div class="tags">
-                    <span>Soporte TI a Usuarios</span>
-                    <span>Configuración de S.O. (Win/Linux)</span>
-                    <span>Reparación de Hardware</span>
-                    <span>Mantenimiento Preventivo</span>
-                    <span>Recuperación de Datos</span>
-                    <span>Redes LAN & WiFi</span>
-                    <span>Gestión de Chromebooks</span>
+                <div class="logros-strip" role="region" aria-label="Logros destacados">
+                    <div class="logro-item">
+                        <span class="logro-numero">30+</span>
+                        <span class="logro-texto">años en TI</span>
+                    </div>
+                    <div class="logro-item">
+                        <span class="logro-numero">10+</span>
+                        <span class="logro-texto">años en educación</span>
+                    </div>
+                    <div class="logro-item">
+                        <span class="logro-numero">2</span>
+                        <span class="logro-texto">establecimientos actuales</span>
+                    </div>
+                    <div class="logro-item">
+                        <span class="logro-numero"><i class="fa-solid fa-check" aria-hidden="true"></i></span>
+                        <span class="logro-texto">Disponibilidad inmediata</span>
+                    </div>
                 </div>
-                <div class="soft-skills">
-                    <p class="text-justify"><i class="fa-solid fa-users"></i> Comunicación Adaptada y Trabajo en Equipo.</p>
-                    <p class="text-justify"><i class="fa-solid fa-lightbulb"></i> Resolución Creativa de Problemas Complejos.</p>
-                </div>
-            </div>
+            </article>
 
-            <div class="section" id="servicios">
-                <h2>Servicios Profesionales</h2>
+            <!-- Especialidades Section -->
+            <article class="section" id="especialidades">
+                <h2 tabindex="-1"><span class="section-number">02.</span> Habilidades Clave</h2>
+                <div class="skills-container">
+                    <div class="tags" role="list">
+                        <span class="tag" role="listitem">
+                            <i class="fa-solid fa-headset"></i>
+                            Soporte TI a Usuarios
+                        </span>
+                        <span class="tag" role="listitem">
+                            <i class="fa-brands fa-windows"></i>
+                            Configuración de S.O. (Win/Linux)
+                        </span>
+                        <span class="tag" role="listitem">
+                            <i class="fa-solid fa-toolbox"></i>
+                            Reparación de Hardware
+                        </span>
+                        <span class="tag" role="listitem">
+                            <i class="fa-solid fa-wrench"></i>
+                            Mantenimiento Preventivo
+                        </span>
+                        <span class="tag" role="listitem">
+                            <i class="fa-solid fa-database"></i>
+                            Recuperación de Datos
+                        </span>
+                        <span class="tag" role="listitem">
+                            <i class="fa-solid fa-wifi"></i>
+                            Redes LAN & WiFi
+                        </span>
+                        <span class="tag" role="listitem">
+                            <i class="fa-brands fa-chrome"></i>
+                            Gestión de Chromebooks
+                        </span>
+                    </div>
+                    <div class="soft-skills">
+                        <div class="soft-skill-item">
+                            <i class="fa-solid fa-users"></i> 
+                            <span>Comunicación Adaptada y Trabajo en Equipo.</span>
+                        </div>
+                        <div class="soft-skill-item">
+                            <i class="fa-solid fa-lightbulb"></i> 
+                            <span>Resolución Creativa de Problemas Complejos.</span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Servicios Section -->
+            <article class="section" id="servicios">
+                <h2 tabindex="-1"><span class="section-number">03.</span> Servicios Profesionales</h2>
                 <div class="services-grid">
-                    <article class="service-card">
-                        <i class="fa-solid fa-network-wired"></i>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fa-solid fa-network-wired" aria-hidden="true"></i>
+                        </div>
                         <h3>Infraestructura de Red</h3>
-                        <p class="text-justify">Instalación y optimización de redes LAN y servicios de ofimática.</p>
-                    </article>
-                    <article class="service-card">
-                        <i class="fa-solid fa-laptop-medical"></i>
+                        <p class="text-justify">Instalación y optimización de redes LAN. Ampliación de la cobertura mediante el despliegue de puntos de acceso (AP). Servicios de ofimática. Gestión de periféricos y recursos compartidos. Instalación y configuración de impresoras en red Wi-Fi y LAN.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fa-solid fa-laptop-medical" aria-hidden="true"></i>
+                        </div>
                         <h3>Soporte Técnico</h3>
-                        <p class="text-justify">Reparación de hardware, mantenimiento preventivo y eliminación de malware.</p>
-                    </article>
-                    <article class="service-card">
-                        <i class="fa-solid fa-school"></i>
+                        <p class="text-justify">Reparación de hardware. Instalación de software. Mantenimiento preventivo y correctivo. Búsqueda y eliminación de virus. Formateo y reinstalación de sistemas operativos. Conocimientos y habilidades avanzadas en informática. Manejo de sistemas operativos Windows y Linux.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fa-solid fa-school" aria-hidden="true"></i>
+                        </div>
                         <h3>Informática Educativa</h3>
-                        <p class="text-justify">Gestión de laboratorios Enlaces, Chromebooks y asesoría técnica docente.</p>
-                    </article>
+                        <p class="text-justify">Gestión de laboratorios Enlaces y Chromebooks; asesoría docente en uso de recursos informáticos; talleres de alfabetización digital y ofimática (Word, Excel, PowerPoint); programas educativos (JClic, Thatquiz, Aprendiendo con Bartolo); organización y calendarización de informática en Establecimientos.</p>
+                    </div>
                 </div>
-            </div>
+            </article>
 
-            <div class="section" id="experiencia">
-                <h2>Experiencia Reciente</h2>
+            <!-- Experiencia Section -->
+            <article class="section" id="experiencia">
+                <h2 tabindex="-1"><span class="section-number">04.</span> Experiencia Reciente</h2>
                 <div class="timeline">
                     <div class="job">
-                        <h4>Encargado Técnico Informático</h4>
-                        <span class="company">CEAS (Corp. Educacional Arzobispado de Stgo.) | 2024 - Presente</span>
+                        <div class="job-header">
+                            <h4>Encargado Técnico Informático</h4>
+                            <span class="job-period">2024 - Presente</span>
+                        </div>
+                        <span class="company">
+                            <i class="fa-solid fa-building"></i>
+                            CEAS (Corp. Educacional Arzobispado de Stgo.)
+                        </span>
                         <p class="text-justify">Soporte técnico integral en Liceo Bicentenario Ntra. Sra. de Guadalupe y Colegio Santo Tomás. Gestión de Chromebooks y servicios de ofimática.</p>
                     </div>
                     <div class="job">
-                        <h4>Encargado de Informática Educativa</h4>
-                        <span class="company">Lincoln College La Florida | 2019</span>
+                        <div class="job-header">
+                            <h4>Encargado de Informática Educativa</h4>
+                            <span class="job-period">2019</span>
+                        </div>
+                        <span class="company">
+                            <i class="fa-solid fa-building"></i>
+                            Lincoln College La Florida
+                        </span>
                         <p class="text-justify">Asesoría docente en uso de recursos informáticos y enseñanza de programas educativos.</p>
                     </div>
                     <div class="job">
-                        <h4>Soporte Técnico Informático</h4>
-                        <span class="company">Colegio Jorge Huneeus Zegers | 2015 - 2019</span>
+                        <div class="job-header">
+                            <h4>Soporte Técnico Informático</h4>
+                            <span class="job-period">2015 - 2019</span>
+                        </div>
+                        <span class="company">
+                            <i class="fa-solid fa-building"></i>
+                            Colegio Jorge Huneeus Zegers
+                        </span>
                         <p class="text-justify">Responsable de laboratorios de computación y salas de Enlaces.</p>
                     </div>
                 </div>
-            </div>
+            </article>
 
-            <div class="section" id="educacion">
-                <h2>Formación Académica</h2>
-                <div class="edu-item">
-                    <p class="text-justify"><strong>TNS en Informática y Redes</strong> - CFT Cenco (Egresado y Titulado).</p>
-                    <a href="Certificado_Titulo_TNS.pdf" class="btn-titulo" target="_blank" rel="noopener noreferrer">
-                        <i class="fa-solid fa-file-pdf"></i> Ver Título 
-                    </a>
+            <!-- Educación Section -->
+            <article class="section" id="educacion">
+                <h2 tabindex="-1"><span class="section-number">05.</span> Formación Académica</h2>
+                <div class="education-list">
+                    <div class="edu-item">
+                        <div class="edu-content">
+                            <h4>TNS en Informática y Redes</h4>
+                            <p class="edu-institution">CFT Cenco (Egresado y Titulado)</p>
+                        </div>
+                        <a href="Certificado_Titulo_TNS.pdf" 
+                           class="btn-titulo" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           aria-label="Ver título de TNS en Informática y Redes">
+                            <i class="fa-solid fa-file-pdf" aria-hidden="true"></i> 
+                            <span>Ver Título</span>
+                        </a>
+                    </div>
+                    <div class="edu-item">
+                        <div class="edu-content">
+                            <h4>Soporte Técnico Microsoft Academy</h4>
+                            <p class="edu-institution">Certificación de Microsoft</p>
+                        </div>
+                        <a href="Certificado_Microsoft.pdf" 
+                           class="btn-titulo" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           aria-label="Ver certificado de Microsoft Academy">
+                            <i class="fa-solid fa-file-pdf" aria-hidden="true"></i> 
+                            <span>Ver Certificado</span>
+                        </a>
+                    </div>
+                    <div class="edu-item">
+                        <div class="edu-content">
+                            <h4>Diplomado Diseño y Programación Web</h4>
+                            <p class="edu-institution">AIEP / Fundación Telefónica</p>
+                        </div>
+                        <a href="Diplomado Diseño y Programacion Web.pdf" 
+                           class="btn-titulo" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           aria-label="Ver diplomado de Diseño y Programación Web">
+                            <i class="fa-solid fa-file-pdf" aria-hidden="true"></i> 
+                            <span>Ver Diplomado</span>
+                        </a>
+                    </div>
                 </div>
-                <div class="edu-item">
-                    <p class="text-justify"><strong>Soporte Técnico Microsoft Academy</strong> - Certificación de Microsoft.</p>
-                    <a href="Certificado_Microsoft.pdf" class="btn-titulo" target="_blank" rel="noopener noreferrer">
-                        <i class="fa-solid fa-file-pdf"></i> Ver Certificado
-                    </a>
-                </div>
-                <div class="edu-item">
-                    <p class="text-justify"><strong>Diplomado Diseño y Programación Web</strong> - AIEP / Fundación Telefónica.</p>
-                    <a href="Diplomado Diseño y Programacion Web.pdf" class="btn-titulo" target="_blank" rel="noopener noreferrer">
-                        <i class="fa-solid fa-file-pdf"></i> Ver Diplomado
-                    </a>
-                </div>
-            </div>
+            </article>
 
-            <div class="section" id="certificaciones">
-                <h2>Certificaciones</h2>
+            <!-- Certificaciones Section -->
+            <article class="section" id="certificaciones">
+                <h2 tabindex="-1"><span class="section-number">06.</span> Certificaciones</h2>
                 <div class="cert-grid">
-                    <a href="Diplomado JavaScript.pdf" target="_blank" rel="noopener noreferrer" class="cert-item">
-                        <img src="https://i.postimg.cc/Vs03gfT4/Java.jpg" alt="Certificado Diplomado Programación JavaScript">
+                    <a href="Diplomado JavaScript.pdf" 
+                       target="_blank" 
+                       rel="noopener noreferrer" 
+                       class="cert-item"
+                       aria-label="Ver certificado de Diplomado Programación JavaScript">
+                        <div class="cert-image-container">
+                            <img src="https://i.postimg.cc/Vs03gfT4/Java.jpg" 
+                                 alt="Certificado Diplomado Programación JavaScript"
+                                 loading="lazy"
+                                 width="80"
+                                 height="80">
+                        </div>
                         <p>Diplomado Programación JavaScript</p>
                     </a>
-                    <a href="Diplomado  Diseño Web con HTML5+CSS.pdf" target="_blank" rel="noopener noreferrer" class="cert-item">
-                        <img src="https://i.postimg.cc/Ls0bkwVq/html-css.png" alt="Certificado Diplomado Diseño Web HTML5+CSS">
+                    <a href="Diplomado  Diseño Web con HTML5+CSS.pdf" 
+                       target="_blank" 
+                       rel="noopener noreferrer" 
+                       class="cert-item"
+                       aria-label="Ver certificado de Diplomado Diseño Web HTML5+CSS">
+                        <div class="cert-image-container">
+                            <img src="https://i.postimg.cc/Ls0bkwVq/html-css.png" 
+                                 alt="Certificado Diplomado Diseño Web HTML5+CSS"
+                                 loading="lazy"
+                                 width="80"
+                                 height="80">
+                        </div>
                         <p>Diplomado Diseño Web HTML5+CSS</p>
                     </a>
-                    <a href="Diplomado modulo  WordPress.pdf" target="_blank" rel="noopener noreferrer" class="cert-item">
-                        <img src="https://i.postimg.cc/28fXx4nj/Word-Press.png" alt="Certificado Diplomado Módulo WordPress">
+                    <a href="Diplomado modulo  WordPress.pdf" 
+                       target="_blank" 
+                       rel="noopener noreferrer" 
+                       class="cert-item"
+                       aria-label="Ver certificado de Diplomado Módulo WordPress">
+                        <div class="cert-image-container">
+                            <img src="https://i.postimg.cc/28fXx4nj/Word-Press.png" 
+                                 alt="Certificado Diplomado Módulo WordPress"
+                                 loading="lazy"
+                                 width="80"
+                                 height="80">
+                        </div>
                         <p>Diplomado Módulo WordPress</p>
                     </a>
                 </div>
-            </div>
+            </article>
 
-            <div class="section" id="contacto">
-                <h2>Contacto</h2>
+            <!-- Contacto Section -->
+            <article class="section" id="contacto">
+                <h2 tabindex="-1"><span class="section-number">07.</span> Contacto</h2>
                 <address class="contact-info">
-                    <p class="text-justify"><i class="fa-solid fa-envelope"></i> <strong>Email:</strong> <a href="mailto:Luis.SnM@hotmail.com">Luis.SnM@hotmail.com</a></p>
-                    <p class="text-justify"><i class="fa-solid fa-phone"></i> <strong>Teléfono:</strong> <a href="tel:+56982661439">+569 8266 1439</a></p>
-                    <p class="text-justify"><i class="fa-solid fa-location-dot"></i> <strong>Ubicación:</strong> El Bosque, Santiago</p>
+                    <div class="contact-item">
+                        <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                        <div class="contact-details">
+                            <strong>Email</strong>
+                            <a href="mailto:Luis.SnM@hotmail.com" aria-label="Enviar email a Luis.SnM@hotmail.com">Luis.SnM@hotmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fa-solid fa-phone" aria-hidden="true"></i>
+                        <div class="contact-details">
+                            <strong>Teléfono</strong>
+                            <a href="tel:+56982661439" aria-label="Llamar al +569 8266 1439">+569 8266 1439</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                        <div class="contact-details">
+                            <strong>Ubicación</strong>
+                            <span>El Bosque, Santiago</span>
+                        </div>
+                    </div>
                 </address>
-            </div>
+            </article>
 
-        </section>
+        </div>
     </main>
 </div>
 
-<a href="https://wa.me/56982661439" class="whatsapp-float" target="_blank" rel="noopener noreferrer" title="Contactar por WhatsApp">
-    <i class="fab fa-whatsapp"></i>
+<!-- WhatsApp Float Button -->
+<a href="https://wa.me/56982661439?text=Hola%20Luis%2C%20vi%20tu%20portafolio%20y%20me%20interesar%C3%ADa%20conocer%20tu%20disponibilidad%20para%20soporte%20TI." 
+   class="whatsapp-float" 
+   target="_blank" 
+   rel="noopener noreferrer" 
+   title="Contactar por WhatsApp"
+   aria-label="Contactar por WhatsApp al +569 8266 1439">
+    <i class="fab fa-whatsapp" aria-hidden="true"></i>
 </a>
 
+<!-- Scripts -->
 <script src="scripts.js"></script>
 </body>
 </html>
