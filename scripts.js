@@ -243,6 +243,8 @@
      */
     function handlePageLoad() {
         if (!DOM.loader) return;
+        if (DOM.loader._dismissed) return;
+        DOM.loader._dismissed = true;
         DOM.loader.style.opacity = '0';
         setTimeout(() => {
             DOM.loader.style.display = 'none';
@@ -388,7 +390,24 @@
         loadSectionFromURL();
         updatePageTitle(STATE.currentSection);
 
-        window.addEventListener('load', handlePageLoad);
+        // Ocultar loader según el estado actual de carga
+        if (document.readyState === 'complete') {
+            // Página ya cargó completamente (común con Live Server y scripts diferidos)
+            handlePageLoad();
+        } else if (document.readyState === 'interactive') {
+            // DOM listo pero recursos externos aún cargando
+            window.addEventListener('load', handlePageLoad, { once: true });
+        } else {
+            window.addEventListener('load', handlePageLoad, { once: true });
+        }
+
+        // Timeout de seguridad: si tras 3s el loader sigue visible, forzar cierre
+        setTimeout(() => {
+            if (DOM.loader && !DOM.loader._dismissed) {
+                handlePageLoad();
+            }
+        }, 3000);
+
         window.addEventListener('resize', debounce(handleResize, 250));
     }
 
